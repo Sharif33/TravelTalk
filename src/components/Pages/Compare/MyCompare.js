@@ -2,6 +2,7 @@ import { Paper, Rating, Table, TableBody, TableCell, TableContainer, TableHead, 
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../Hooks/useAuth/useAuth';
+// import Header from '../../Shared/Header/Header';
 
 const MyCompare = () => {
     let deleteCount = 0;
@@ -49,6 +50,7 @@ const MyCompare = () => {
     }
     return (
         <div>
+            {/* <Header compares={compares}></Header> */}
             <div className="container py-4">
         <TableContainer component={Paper}>
             <Table sx={{}} aria-label="Manage Products table">

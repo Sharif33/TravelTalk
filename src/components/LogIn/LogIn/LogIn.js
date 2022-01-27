@@ -2,6 +2,7 @@ import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography
 import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
+import Header from '../../Shared/Header/Header';
 
 const LogIn = () => {
     const [loginData, setLoginData] = useState({});
@@ -27,7 +28,7 @@ const LogIn = () => {
     }
     return (
         <>
-{/* <Header/> */}
+<Header/>
             <Container>
                 <Grid sx={{ my: 4 }} container>
                     <Grid className="p-4 shadow text-center rounded" item xs={12} md={6}>
