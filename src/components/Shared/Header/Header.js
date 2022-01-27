@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
-import header from '../../images/header2.png';
+import header from '../../images/header.png';
 
 const Header = () => {
     const { user, logOut } = useAuth();
@@ -24,14 +24,16 @@ const Header = () => {
                                         <li className="nav-item">
                                             <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1  " aria-current="page" to="/home">Home</NavLink>
                                         </li>
+                                        {
+                                            user?.email && <li className="nav-item">
+                                            <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' , backgroundColor: isActive ? 'white' : ''})} className="nav-link active mx-1  " to="/shareExp">Share Your Blog</NavLink>
+                                        </li>
+                                        }
                                         <li className="nav-item">
                                             <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1  " href="#contact" to="/contact">Contact</NavLink>
                                         </li>
                                         <li className="nav-item">
                                             <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1  " to="/about">About</NavLink>
-                                        </li>
-                                        <li className="nav-item">
-                                            <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1  " to="/myCompare">Compare</NavLink>
                                         </li>
                                         {
                                             user?.email && <li className="nav-item">
