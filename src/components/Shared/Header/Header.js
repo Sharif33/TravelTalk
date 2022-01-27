@@ -41,7 +41,7 @@ const Header = () => {
                                         {
                                             user?.email ? 
                                             <li className="nav-item">
-                                            <p onClick={logOut} className='nav-link active mx-1 text-danger'>LogOut</p>
+                                            <button onClick={logOut} className='btn nav-link mx-1 text-danger'>LogOut</button>
                                         </li> 
                                         : 
                                         <li className="nav-item">

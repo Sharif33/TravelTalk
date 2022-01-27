@@ -5,11 +5,11 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth/useAuth';
+import Header from '../../../Shared/Header/Header';
 import './BlogDetails.css';
 
 const BlogDetails = () => {
     const { user} = useAuth();
-    const [disabled,setDisabled]=useState(false);
 
     const { id } = useParams();
 
@@ -40,9 +40,9 @@ const BlogDetails = () => {
 
     return (
         <div>
+            <Header/>
             <div className='text-center py-4'>
-                <h5 className='py-3'>{blogs?.category} | <span className='text-secondary'>{blogs?.location}</span></h5>
-                <div>
+            <div>
                                 {
                                     blogs?.name && <form className='custom-form' onSubmit={handleSubmit(onSubmit)}>
                                         <Button className='btn-custom' type="submit" variant="contained">Add to Compare</Button>
@@ -50,6 +50,7 @@ const BlogDetails = () => {
                                     </form>
                                 }
                             </div>
+                <h5 className='py-3'>{blogs?.category} | <span className='text-secondary'>{blogs?.location}</span></h5>
                 <h1>{blogs?.name}</h1>
                 <div className='d-md-flex justify-content-evenly align-items-center px-3'> 
                 <Box sx={{
