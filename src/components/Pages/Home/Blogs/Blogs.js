@@ -4,12 +4,20 @@ import Blog from './Blog';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
+    const [page, setPage]=useState(0);
+    const [pageCount, setPageCount]=useState(0);
+    const size = 10;
 
     useEffect(() => {
-        fetch(`https://travel-talk.herokuapp.com/blogs`)
+        fetch(`https://travel-talk.herokuapp.com/blogs?page=${page}&&size=${size}`)
             .then(res => res.json())
-            .then(data => setBlogs(data))
-    }, [])
+            .then(data => {
+                   setBlogs(data.blogs)
+                   const count = data.count;
+               const pageNumber = Math.ceil(count/size);
+               setPageCount(pageNumber);
+            } )  
+    }, [page])
     return (
         <div className='bg-light'>
             <div className="container">
@@ -24,6 +32,12 @@ const Blogs = () => {
                             blog={blog}
                             setBlogs={setBlogs}
                         />)
+                    }
+                </div>
+                <div className='text-center my-4'>
+                    {
+                        [...Array(pageCount).keys()].map(number=> <button className={number == page ? 'selected' : 'pagibtn'} key={number} onClick={()=>setPage(number)}>{number+1}</button>)
+                        
                     }
                 </div>
             </div>
