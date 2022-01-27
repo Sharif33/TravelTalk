@@ -4,6 +4,7 @@ import AuthProvider from './components/Contexts/AuthProvider/AuthProvider';
 import LogIn from './components/LogIn/LogIn/LogIn';
 import PrivateRoute from './components/LogIn/PrivateRoute/PrivateRoute';
 import Register from './components/LogIn/Register/Register';
+import MyCompare from './components/Pages/Compare/MyCompare';
 import About from './components/Pages/Home/About/About';
 import BlogDetails from './components/Pages/Home/Blogs/BlogDetails';
 import Contact from './components/Pages/Home/Contact/Contact';
@@ -24,6 +25,9 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="blog/:id" element={<PrivateRoute>
             <BlogDetails />
+          </PrivateRoute>} />
+          <Route path="myCompare" element={<PrivateRoute>
+            <MyCompare />
           </PrivateRoute>} />
         </Routes>
       </AuthProvider>

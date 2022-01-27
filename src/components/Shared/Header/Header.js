@@ -30,6 +30,9 @@ const Header = () => {
                                         <li className="nav-item">
                                             <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1  " to="/about">About</NavLink>
                                         </li>
+                                        <li className="nav-item">
+                                            <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1  " to="/myCompare">Compare</NavLink>
+                                        </li>
                                         {
                                             user?.email && <li className="nav-item">
                                             <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' , backgroundColor: isActive ? 'white' : ''})} className="nav-link active mx-1  " to="/dashboard">Dashboard</NavLink>
