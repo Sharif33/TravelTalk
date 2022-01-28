@@ -29,21 +29,22 @@ const Blogs = () => {
         // console.log(result)
     }
     return (
-        <div className='bg-light'>
-            <div className="px-3">
+        <div style={{overflowX:"hidden"}} className='bg-light'>
+            <div className="">
                 <div className='row'>
-                    <div className='col-4 col-md-2'>
+                    <div className='col-4 col-md-2 bg-dark'>
                     <div className='text-center d-block'>
-                       <h4 className='pt-3'>Top spot</h4>
-                        <button onClick={() => filterResult('Bangladesh')} className='btn btn-warning mx-2 w-100 mb-2'>Bangladesh</button>
-                        <button onClick={() => filterResult('Canada')} className='btn btn-warning mx-2 w-100 mb-2'>Canada</button>
-                        <button onClick={() => filterResult('France')} className='btn btn-warning mx-2 w-100 mb-2'>France</button>
-                        <button onClick={() => filterResult('India')} className='btn btn-warning mx-2 w-100 mb-2'>India</button>
-
+                       <h4 className='pt-3 text-light'>Top spot</h4> <hr className='text-light'/>
+                        <h6 style={{cursor:"pointer"}} onClick={() => filterResult('Bangladesh')} className='text-warning mb-2'>Bangladesh</h6>
+                        <h6 style={{cursor:"pointer"}} onClick={() => filterResult('Canada')} className='text-warning mb-2'>Canada</h6>
+                        <h6 style={{cursor:"pointer"}} onClick={() => filterResult('France')} className='text-warning mb-2'>France</h6>
+                        <h6 style={{cursor:"pointer"}} onClick={() => filterResult('India')} className='text-warning mb-2'>India</h6>
+                        <h6 style={{cursor:"pointer"}} onClick={() => setCategories(blogs)} className='text-info mb-2'>See all</h6>
                     </div>
                     </div>
-                    <div className='col-8 col-md-10'>
-                        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 m-2 g-4">
+                    <div className='col-8 col-md-10 text-center'>
+                        <h4 className='pt-3'>Travelers Experience</h4> <hr />
+                        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 m-2 g-4">
                     {categories.length == 0 ?
                         <div className="w-100 text-center">
                             <CircularProgress />

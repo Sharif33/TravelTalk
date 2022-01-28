@@ -24,11 +24,11 @@ const Header = () => {
                                         <li className="nav-item">
                                             <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1  " aria-current="page" to="/home">Home</NavLink>
                                         </li>
-                                        {
-                                            user?.email && <li className="nav-item">
+                                        
+                                            <li className="nav-item">
                                             <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' , backgroundColor: isActive ? 'white' : ''})} className="nav-link active mx-1  " to="/shareExp">Share Your Blog</NavLink>
                                         </li>
-                                        }
+                                        
                                         <li className="nav-item">
                                             <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1  " href="#contact" to="/contact">Contact</NavLink>
                                         </li>

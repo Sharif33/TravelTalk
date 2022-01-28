@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../Shared/Footer/Footer';
 import Header from '../../../Shared/Header/Header';
 
 const Contact = () => {
@@ -57,7 +58,7 @@ const Contact = () => {
        </div>
        </div>
    </div> 
-   {/* <Footer/> */}
+   <Footer/>
    </div>
     );
 };

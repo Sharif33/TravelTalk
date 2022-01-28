@@ -2,6 +2,7 @@ import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography
 import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
+import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 
 const LogIn = () => {
@@ -43,7 +44,7 @@ const LogIn = () => {
                                 variant="standard" />
                             <TextField
                                 sx={{ width: '75%', m: 1 }}
-                                id="standard-basic"
+                                id="standard-basic2"
                                 label="Your Password"
                                 type="password"
                                 name="password"
@@ -71,7 +72,7 @@ const LogIn = () => {
                     </Grid>
                 </Grid>
             </Container>
-            {/* <Footer/> */}
+            <Footer/>
         </>
     );
 };

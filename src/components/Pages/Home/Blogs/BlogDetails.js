@@ -5,7 +5,9 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth/useAuth';
+import Footer from '../../../Shared/Footer/Footer';
 import Header from '../../../Shared/Header/Header';
+import ShareExperience from '../ShareExperience/ShareExperience';
 import './BlogDetails.css';
 
 const BlogDetails = () => {
@@ -69,7 +71,7 @@ const BlogDetails = () => {
             </div>
             <div className='col-10 col-md-8 mx-auto p-3 blog-desk bg-light rounded'>
                 <div className=''> 
-                    <p className='fw-bold'>By {blogs.author} | <span className='text-secondary'>{blogs.date}</span></p>
+                    <p className='fw-bold'>By {blogs.author} | <span className='text-secondary'>{blogs.date} | {blogs?.time}</span></p>
                     <hr />
                 </div>
                 <div>
@@ -77,6 +79,12 @@ const BlogDetails = () => {
                     <p>{blogs.description}</p>
                 </div>
             </div>
+            <hr />
+            <div className='text-center'>
+                <h4 >Share your Travel experience</h4>
+            <ShareExperience/>
+            </div>
+            <Footer/>
         </div>
     );
 };

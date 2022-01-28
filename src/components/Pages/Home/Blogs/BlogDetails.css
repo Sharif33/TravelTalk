@@ -23,3 +23,9 @@
     border-radius: 50px;
     border: none;
 }
+
+/* for blog */
+
+.img-blog:hover{
+opacity: 70%;
+}

@@ -2,6 +2,7 @@ import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography
 import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
+import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 
 const Register = () => {
@@ -88,6 +89,7 @@ const Register = () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Footer/>
         </>
     );
 };

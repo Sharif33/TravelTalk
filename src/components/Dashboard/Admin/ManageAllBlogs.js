@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import ManageBlogs from './ManageBlogs';
 
 const ManageAllBlogs = () => {
-    const [allImages, setAllImages] = useState([]);
+    const [allBlogs, setAllBlogs] = useState([]);
     useEffect(() => {
         fetch('https://travel-talk.herokuapp.com/allBlogs')
         .then(res => res.json())
-        .then(data => setAllImages(data))
+        .then(data => setAllBlogs(data))
         .catch(error => {
             // if (error) {
             //     window.location.reload();
@@ -17,25 +17,25 @@ const ManageAllBlogs = () => {
     return (
         <div>
         <div className='container'>
-            <h4 className="text-center m-4">Manage All Images</h4><hr />
+            <h4 className="text-center m-4">Blogs Management</h4><hr />
         </div>
         {
-            allImages[0]?._id &&
+            allBlogs[0]?._id &&
             <div>
             <TableContainer component={Paper}>
             <Table sx={{}} aria-label="Manage blogs table">
             <TableHead>
                     <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Id</TableCell>
-                        <TableCell >email</TableCell>
-                        <TableCell >Status</TableCell>
-                        <TableCell >Action</TableCell>
+                        <TableCell style={{color:"blue",fontSize:"1.2em", fontWeight:"bold"}}>Name</TableCell>
+                        <TableCell style={{color:"blue",fontSize:"1.2em", fontWeight:"bold"}}>Id</TableCell>
+                        <TableCell style={{color:"blue",fontSize:"1.2em", fontWeight:"bold"}}>email</TableCell>
+                        <TableCell style={{color:"blue",fontSize:"1.2em", fontWeight:"bold"}}>Status</TableCell>
+                        <TableCell style={{color:"blue",fontSize:"1.2em", fontWeight:"bold"}}>Action</TableCell>
                     </TableRow>
                 </TableHead>
             {
-                allImages.map(image => {
-                    return <ManageBlogs key={image._id} image={image} allImages={allImages} setAllImages={setAllImages} />
+                allBlogs.map(blog => {
+                    return <ManageBlogs key={blog._id} blog={blog} allBlogs={allBlogs} setAllBlogs={setAllBlogs} />
                 })
             }
                         </Table>
