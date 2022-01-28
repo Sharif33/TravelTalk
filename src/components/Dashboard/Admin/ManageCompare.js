@@ -13,7 +13,7 @@ const ManageCompare = () => {
     const handleDeleteOrders = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `https://travel-talk.herokuapp.com/userCompare/${id}`
+            const url = `https://travel-talk.herokuapp.com/MyCompared/${id}`
             fetch(url, {
                 method: 'DELETE',
             })
