@@ -43,11 +43,11 @@ const Header = () => {
                                         {
                                             user?.email ? 
                                             <li className="nav-item">
-                                            <button onClick={logOut} className='btn nav-link mx-1 text-danger'>LogOut</button>
+                                            <button onClick={logOut} className='btn nav-link mx-1 text-danger'>Logout</button>
                                         </li> 
                                         : 
                                         <li className="nav-item">
-                                                <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1" to="/login">Sign In<span><i className="fas fa-user"></i></span> </NavLink>
+                                                <NavLink style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })} className="nav-link active mx-1" to="/login">LogIn <span> <i className="fas fa-user"> </i> </span> </NavLink>
                                             </li>
                                         }  
                                          <li className="nav-item">

@@ -87,7 +87,9 @@ function Dashboard(props) {
 
     return (
         <>
-        
+        <div style={{overflowX:"hidden"}}>
+
+        </div>
         <Box sx={{ display: 'flex', backgroundColor:'#f8fafc' }}>
             <CssBaseline />
             <AppBar

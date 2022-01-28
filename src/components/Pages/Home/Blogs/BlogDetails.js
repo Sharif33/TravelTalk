@@ -34,14 +34,14 @@ const BlogDetails = () => {
         axios.post(`https://travel-talk.herokuapp.com/userCompare`, data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('Successfully added.Please Check Compare');
-                    reset();
+                    alert('Successfully added.Please Check Compare on Dashboard');
+                    reset();        
                 }
             })
     }
 
     return (
-        <div>
+        <div style={{overflowX:"hidden"}}>
             <Header/>
             <div className='text-center py-4'>
             <div>
@@ -61,7 +61,7 @@ const BlogDetails = () => {
                                 <Typography><Rating name="half-rating-read" precision={0.5} size="small" value={Number(blogs?.star)} readOnly />( {blogs?.rating}) </Typography>
 
                             </Box>
-                    <p>Expense: {blogs.cost} tk</p>
+                    <p>Expense: {blogs.cost} &#x9F3;</p>
                 </div>
             </div>
             <div>
@@ -71,7 +71,7 @@ const BlogDetails = () => {
             </div>
             <div className='col-10 col-md-8 mx-auto p-3 blog-desk bg-light rounded'>
                 <div className=''> 
-                    <p className='fw-bold'>By {blogs.author} | <span className='text-secondary'>{blogs.date} | {blogs?.time}</span></p>
+                    <p>By {blogs.author} | <span className='text-secondary'>{blogs.date} | {blogs?.time}</span></p>
                     <hr />
                 </div>
                 <div>
